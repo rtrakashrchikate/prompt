@@ -138,6 +138,7 @@ Some places where we have been featured:
 - Wall Street Journal - [ChatGPT Can Give Great Answers. But Only If You Know How to Ask the Right Question](https://www.wsj.com/articles/chatgpt-ask-the-right-question-12d0f035)
 - Forbes - [Mom, Dad, I Want To Be A Prompt Engineer](https://www.forbes.com/sites/craigsmith/2023/04/05/mom-dad-i-want-to-be-a-prompt-engineer/?sh=7f1213159c8e)
 - Markettechpost - [Best Free Prompt Engineering Resources (2023)](https://www.marktechpost.com/2023/04/04/best-free-prompt-engineering-resources-2023/)
+- [PromptPerfect](https://github.com/beagle-ai-solutions/promptperfect) - Open-source prompt optimizer with explanations. BYOK, works with Gemini, OpenAI, Anthropic
 
 
 ---
