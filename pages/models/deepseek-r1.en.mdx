@@ -1,0 +1,68 @@
+# DeepSeek-R1
+
+DeepSeek-R1 is an open-source reasoning model developed by DeepSeek AI that achieves performance comparable to OpenAI o1 across math, code, and reasoning tasks. It was released in January 2025 and quickly became one of the most discussed AI models due to its strong benchmark results and open weights.
+
+## Key Capabilities
+
+DeepSeek-R1 uses reinforcement learning (RL) to develop reasoning capabilities, with the model learning to "think" through problems step-by-step before producing a final answer. It supports a context window of 128K tokens and is available in multiple sizes ranging from 1.5B to 671B parameters.
+
+Key features include:
+- Strong performance on math (AIME 2024) and coding benchmarks (Codeforces)
+- Transparent chain-of-thought reasoning visible in outputs
+- Fully open weights under the MIT license
+- Distilled smaller variants (1.5B, 7B, 8B, 14B, 32B, 70B) for local deployment
+
+## Prompting DeepSeek-R1
+
+DeepSeek-R1 responds well to direct, structured prompts. Avoid adding explicit chain-of-thought instructions like "think step by step" — the model generates reasoning traces automatically.
+
+**Basic Prompt:**
+```
+Solve the following: If a train travels 120km in 1.5 hours, what is its average speed?
+```
+
+**Sample Output:**
+```
+Speed = Distance / Time = 120 / 1.5 = 80 km/h
+```
+
+For complex reasoning tasks, simply state the problem clearly:
+```
+Write a Python function that checks whether a number is prime.
+```
+
+DeepSeek-R1 will internally reason through edge cases before producing the final code output.
+
+## Running DeepSeek-R1 Locally
+
+Smaller distilled variants can be run locally via Ollama:
+```bash
+ollama run deepseek-r1:7b
+```
+
+Or via the official API:
+```python
+import os
+from openai import OpenAI
+
+# Set the DEEPSEEK_API_KEY environment variable with your API key.
+client = OpenAI(
+    api_key=os.environ.get("DEEPSEEK_API_KEY"),
+    base_url="https://api.deepseek.com"
+)
+
+response = client.chat.completions.create(
+    model="deepseek-reasoner",
+    messages=[
+        {"role": "user", "content": "Explain the difference between supervised and unsupervised learning."}
+    ]
+)
+
+print(response.choices[0].message.content)
+```
+
+## References
+
+- [DeepSeek-R1 Paper](https://arxiv.org/abs/2501.12948)
+- [DeepSeek GitHub](https://github.com/deepseek-ai/DeepSeek-R1)
+- [DeepSeek API Docs](https://platform.deepseek.com/docs)
