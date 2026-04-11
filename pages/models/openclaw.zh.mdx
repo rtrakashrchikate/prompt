@@ -1,0 +1,116 @@
+# OpenClaw - 本地 AI 助手
+
+import { Callout } from 'nextra/components'
+
+<Callout type="info" emoji="ℹ️">
+OpenClaw 是一个强大的本地 AI 助手，为你的开发环境带来 AI 协作者能力。
+</Callout>
+
+## 概述
+
+OpenClaw 是一个开源 AI 助手，运行在本地机器上。与云端 AI 工具不同，OpenClaw 保护你的数据隐私，提供持久记忆、工作流自动化和深度系统集成。
+
+## 核心特性
+
+### 🤖 本地 AI 执行
+- 完全在本地机器上运行
+- 数据不离开你的环境
+- 支持多种 AI 提供商（OpenAI、Anthropic、Google 等）
+
+### 💾 持久记忆
+- 记住你的偏好和过去的交互
+- 跨会话的长期记忆
+- 上下文感知的对话
+
+### 🔧 深度系统集成
+- 文件系统访问
+- Shell 命令执行
+- 浏览器自动化
+- Git 操作
+
+### ⚡ 工作流自动化
+- 自定义技能系统，可扩展
+- 自动化管道
+- 定时任务（cron 作业）
+
+### 🔌 丰富的工具生态
+- 飞书集成（中国用户）
+- GitHub 操作
+- 浏览器控制
+- 多平台支持（Windows、macOS、Linux）
+
+## 提示词指南
+
+使用 OpenClaw 时，使用清晰具体的提示词：
+
+```markdown
+# 好的提示词示例
+创建一个 Python 脚本：
+1. 从 CSV 文件读取数据
+2. 使用 pandas 处理数据
+3. 将结果输出到新的 CSV
+
+# 包含具体要求
+- 优雅处理缺失值
+- 添加日志以便调试
+- 包含单元测试
+```
+
+## 使用场景
+
+| 类别 | 示例 |
+|------|------|
+| **开发** | 代码生成、调试、代码审查 |
+| **自动化** | 文件处理、定时任务、工作流自动化 |
+| **数据分析** | 数据处理、报告生成 |
+| **沟通** | 飞书消息、邮件自动化 |
+| **研究** | 网页抓取、信息收集 |
+
+## 安装
+
+```bash
+# 通过 npm 安装
+npm install -g openclaw
+
+# 初始化配置
+openclaw init
+
+# 启动交互模式
+openclaw start
+```
+
+## 配置
+
+OpenClaw 使用 YAML 配置文件：
+
+```yaml
+model: "claude-sonnet-4-20250514"
+provider: "anthropic"
+skills:
+  - browser-automation
+  - file-management
+  - shell-commands
+memory:
+  enabled: true
+  persist: true
+```
+
+## 与其他工具对比
+
+| 特性 | OpenClaw | Claude Code | Cursor |
+|------|----------|-------------|--------|
+| 本地部署 | ✅ | ❌ | ❌ |
+| 持久记忆 | ✅ | 有限 | 有限 |
+| 技能系统 | ✅ | ❌ | ❌ |
+| 飞书集成 | ✅ | ❌ | ❌ |
+| 免费使用 | ✅ | ✅ | 有限 |
+
+## 资源
+
+- [官方文档](https://docs.openclaw.ai)
+- [GitHub 仓库](https://github.com/openclaw/openclaw)
+- [Discord 社区](https://discord.gg/openclaw)
+
+<Callout type="warning" emoji="⚠️">
+OpenClaw 需要从你选择的 AI 提供商获取 API 密钥。默认不包含 AI 能力。
+</Callout>
