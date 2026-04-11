@@ -1,0 +1,116 @@
+# OpenClaw - Local AI Assistant
+
+import { Callout } from 'nextra/components'
+
+<Callout type="info" emoji="ℹ️">
+OpenClaw is a powerful local AI assistant that brings AI co-worker capabilities to your development environment.
+</Callout>
+
+## Overview
+
+OpenClaw is an open-source AI assistant that runs locally on your machine. Unlike cloud-based AI tools, OpenClaw keeps your data private and provides persistent memory, workflow automation, and deep system integration.
+
+## Key Features
+
+### 🤖 Local AI Execution
+- Runs entirely on your local machine
+- No data leaves your environment
+- Supports multiple AI providers (OpenAI, Anthropic, Google, etc.)
+
+### 💾 Persistent Memory
+- Remembers your preferences and past interactions
+- Long-term memory across sessions
+- Context-aware conversations
+
+### 🔧 Deep System Integration
+- File system access
+- Shell command execution
+- Browser automation
+- Git operations
+
+### ⚡ Workflow Automation
+- Custom skill system for extensibility
+- Automation pipelines
+- Scheduled tasks (cron jobs)
+
+### 🔌 Rich Tool Ecosystem
+- Feishu (飞书) integration for Chinese users
+- GitHub operations
+- Browser control
+- Multi-platform support (Windows, macOS, Linux)
+
+## Prompting Guide
+
+When working with OpenClaw, use clear and specific prompts:
+
+```markdown
+# Good prompt example
+Create a Python script that:
+1. Reads data from a CSV file
+2. Processes the data with pandas
+3. Outputs results to a new CSV
+
+# Include specific requirements
+- Handle missing values gracefully
+- Add logging for debugging
+- Include unit tests
+```
+
+## Use Cases
+
+| Category | Examples |
+|----------|----------|
+| **Development** | Code generation, debugging, code review |
+| **Automation** | File processing, scheduled tasks, workflow automation |
+| **Data Analysis** | Data processing, report generation |
+| **Communication** | Feishu messaging, email automation |
+| **Research** | Web scraping, information gathering |
+
+## Installation
+
+```bash
+# Install via npm
+npm install -g openclaw
+
+# Initialize configuration
+openclaw init
+
+# Start interactive mode
+openclaw start
+```
+
+## Configuration
+
+OpenClaw uses a YAML configuration file:
+
+```yaml
+model: "claude-sonnet-4-20250514"
+provider: "anthropic"
+skills:
+  - browser-automation
+  - file-management
+  - shell-commands
+memory:
+  enabled: true
+  persist: true
+```
+
+## Comparison with Other Tools
+
+| Feature | OpenClaw | Claude Code | Cursor |
+|---------|----------|-------------|--------|
+| Local deployment | ✅ | ❌ | ❌ |
+| Persistent memory | ✅ | Limited | Limited |
+| Skill system | ✅ | ❌ | ❌ |
+| Feishu integration | ✅ | ❌ | ❌ |
+| Free to use | ✅ | ✅ | Limited |
+
+## Resources
+
+- [Official Documentation](https://docs.openclaw.ai)
+- [GitHub Repository](https://github.com/openclaw/openclaw)
+- [Discord Community](https://discord.gg/openclaw)
+
+<Callout type="warning" emoji="⚠️">
+OpenClaw requires an API key from your chosen AI provider. It does not include AI capabilities by default.
+</Callout>
