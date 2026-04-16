@@ -1,5 +1,7 @@
 # Prompt Engineering Guide
 
+- [FutureAGI agent-opt](https://github.com/future-agi/agent-opt)
+
 <h5 align="center">
   Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://serpapi.com/"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/serpapi.png" height=35 valign="middle"></a>
 </h5>
