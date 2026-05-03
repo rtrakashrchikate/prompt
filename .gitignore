@@ -28,6 +28,7 @@ Prompt-Engineering-Guide-notes/
 .next
 node_modules
 prompts
+tsconfig.tsbuildinfo
 
 #mcp
 .mcp.json
