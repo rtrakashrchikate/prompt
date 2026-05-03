@@ -16,7 +16,11 @@ pages/research/local_research/
 .vscode
 agent.toml
 content_suggestions/
-.claude/
+.claude/*
+!.claude/settings.json
+!.claude/hooks/
+.claude/hooks/*
+!.claude/hooks/session-start.sh
 .qodo/
 Prompt-Engineering-Guide-notes/
 
